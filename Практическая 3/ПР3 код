@@ -1,0 +1,14 @@
+Вариант 9.
+def can_break_chocolate(n, m, k):
+    # Проверяем условия для разлома шоколадки
+    if (k % n == 0 and k // n <= m) or (k % m == 0 and k // m <= n):
+        return "Да"
+    else:
+        return "Нет"
+
+# Ввод значений n, m, k
+n, m, k = map(int, input().split())
+
+# Вызов функции и вывод результата
+result = can_break_chocolate(n, m, k)
+print (result)
