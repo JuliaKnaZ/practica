@@ -1,0 +1,25 @@
+Вариант 9.
+def fibonacci_sum(n):
+    if n <= 0:
+        return 0
+
+    fib1, fib2 = 0, 1
+    total_sum = 0
+
+    for _ in range(n):
+        total_sum += fib1  # Добавляем текущее число Фибоначчи к сумме
+        fib1, fib2 = fib2, fib1 + fib2  # Переход к следующему числу в ряду
+
+    return total_sum
+while True:
+    try:
+        N = int(input("Введите количество чисел Фибоначчи (или 0 для выхода): "))
+        if N == 0:
+            print("Программа завершена.")
+            break  # Выход из цикла, если введен 0
+
+        result = fibonacci_sum(N)
+        print("Сумма первых", N, "чисел Фибоначчи:", result)
+
+    except ValueError:
+        print("Пожалуйста, введите целое число.")
