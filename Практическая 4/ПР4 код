@@ -7,8 +7,8 @@ def fibonacci_sum(n):
     total_sum = 0
 
     for _ in range(n):
-        total_sum += fib1  # Добавляем текущее число Фибоначчи к сумме
-        fib1, fib2 = fib2, fib1 + fib2  # Переход к следующему числу в ряду
+        total_sum += fib1  
+        fib1, fib2 = fib2, fib1 + fib2  
 
     return total_sum
 while True:
